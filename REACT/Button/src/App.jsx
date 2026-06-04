@@ -4,13 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let x = 0;
+  const[x, setX] = useState(1);
   const [count, setCount] = useState(1);
   const handle = () =>{
-    x += 1;
+    setX(x+1);
     if(x ===3){
       setCount(count*2);
-      x = 0;
+      setX(1);
     }
   }
   return (
